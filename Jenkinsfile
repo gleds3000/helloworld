@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'cd git-example ; sh ./build' 
+                bat 'cd git-example ; bat ./build' 
             }
         }
         stage('Test'){
             steps {
-                sh 'cd git-example ; sh ./test'
+                bat 'cd git-example ; bat ./test'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploy..."'
+                bat 'echo "Deploy..."'
             }
         }
     }
