@@ -13,3 +13,8 @@ node {
         stage "\u001B[31mI'm Red\u001B[0m Now not"
     }
 }
+  post {
+        failure {
+            mail to: 'gleds3000@gmail.com', subject: 'Pipeline falhou em local', body: "${env.BUILD_URL}"
+        }
+    }
