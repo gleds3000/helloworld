@@ -1,9 +1,9 @@
-stage 'Checkout'
- node('slave') {
-  sh 'echo teste'
+//stage 'Checkout'
+ //node('slave') {
+  //sh 'echo teste'
   //deleteDir()
  // checkout scm
- }
+ //}
 // This shows a simple build wrapper example, using the AnsiColor plugin.
 stage 'Cores'
 node {
