@@ -1,13 +1,9 @@
-//stage 'Checkout'
- //node('slave') {
+stage 'Checkout'
+ node('master') {
   //sh 'echo teste'
-  //deleteDir()
- // checkout scm
- //}
-// This shows a simple build wrapper example, using the AnsiColor plugin.
-
+  bat 'echo esse foi o build numero: ${BUILD_NUMBER}'
 }
-  post {
+ post {
         failure {
             mail to: 'gleds3000@gmail.com', subject: 'Pipeline falhou em local', body: "${env.BUILD_URL}"
         }
